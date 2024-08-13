@@ -3,7 +3,6 @@ import axios from 'axios'
 
 const getAdmiralScript = async (publication, environment) => {
   let pubId = process.env[publication]
-  console.log(pubId)
   const response = axios({
     method: 'get',
     url: `https://delivery.api.getadmiral.com/script/${pubId}/bootstrap?environment=${environment}`,
